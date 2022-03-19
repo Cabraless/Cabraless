@@ -6,7 +6,7 @@ let password = document.querySelector("#password")
 
 let cointainerPassword = document.querySelector("#container-password")
 
-let charset = abcdefghijklmnopqrstuvxzABCDEFGHIJKLMNOPQRSTUVXZ1234567890!@"
+let charset = "abcdefghijklmnopqrstuvxzABCDEFGHIJKLMNOPQRSTUVXZ1234567890!@"
 let novaSenha = ''
 
 sizePassword.innerHTML = sliderElement.value
