@@ -1,30 +1,30 @@
-let sliderElement = document.querySelector("#slider")
-let buttonElement = document.querySelector("#button")
+let sliderElement = document.querySelector('#slider')
+let buttonElement = document.querySelector('#button')
 
-let sizePassword = document.querySelector("#valor")
-let password = document.querySelector("#password")
+let sizePassword = document.querySelector('#valor')
+let password = document.querySelector('#password')
 
-let cointainerPassword = document.querySelector("#container-password")
+let cointainerPassword = document.querySelector('#container-password')
 
-let charset = "abcdefghijklmnopqrstuvxzABCDEFGHIJKLMNOPQRSTUVXZ1234567890!@"
+let charset = 'abcdefghijklmnopqrstuvxzABCDEFGHIJKLMNOPQRSTUVXZ1234567890!@'
 let novaSenha = ''
 
 sizePassword.innerHTML = sliderElement.value
 
-slider.oniput = function () {
+slider.oninput = function () {
+  console.log(this.value)
   sizePassword.innerHTML = this.value
 }
 
 function generatePassword() {
-  let pass = ""
+  let pass = ''
   for (let i = 0, n = charset.length; i < sliderElement.value; ++i) {
     pass += charset.charAt(Math.floor(Math.random() * n))
   }
+  cointainerPassword.classList.remove('hide')
+  password.innerHTML = pass
+  novaSenha = pass
 }
-
-cointainerPassword.classList.remove('hide')
-password.innerHTML = pass
-novaSenha = password
 
 function copyPassword() {
   alert('Senha copiada com sucesso!')
